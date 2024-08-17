@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingresar Horas de Cursada</title>
+    <title>Ejercicio 2 - Formulario</title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
 </head>
-<body>
-    <h1>Horas de Cursada - Programación Web Dinámica</h1>
-    
-    <form id="form2" name="form2" method="get" action="../control/verhoras.php">
-        <label for="lunes">Lunes:</label>
-        <input type="number" id="lunes" name="horas[lunes]" min="0" max="24" required><br>
-        
-        <label for="martes">Martes:</label>
-        <input type="number" id="martes" name="horas[martes]" min="0" max="24" required><br>
-        
-        <label for="miercoles">Miércoles:</label>
-        <input type="number" id="miercoles" name="horas[miercoles]" min="0" max="24" required><br>
-        
-        <label for="jueves">Jueves:</label>
-        <input type="number" id="jueves" name="horas[jueves]" min="0" max="24" required><br>
-        
-        <label for="viernes">Viernes:</label>
-        <input type="number" id="viernes" name="horas[viernes]" min="0" max="24" required><br>
-        
-        <label for="sabado">Sábado:</label>
-        <input type="number" id="sabado" name="horas[sabado]" min="0" max="24" required><br>
-        
-        <label for="domingo">Domingo:</label>
-        <input type="number" id="domingo" name="horas[domingo]" min="0" max="24" required><br>
-        
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
-
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Ingrese las Horas de Cursada</h1>
+        <form id="form1" name="form1" method="get" action="Action/actionEj2.php">
+            <div class="mb-3">
+                <label for="lunes">Lunes:</label>
+                <input name="lunes" type="number" id="lunes" class="form-control" required step="1" min="0" max="24">
+            </div>
+            <div class="mb-3">
+                <label for="martes">Martes:</label>
+                <input name="martes" type="number" id="martes" class="form-control" required step="1" min="0" max="24">
+            </div>
+            <div class="mb-3">
+                <label for="miercoles">Miércoles:</label>
+                <input name="miercoles" type="number" id="miercoles" class="form-control" required step="1" min="0" max="24">
+            </div>
+            <div class="mb-3">
+                <label for="jueves">Jueves:</label>
+                <input name="jueves" type="number" id="jueves" class="form-control" required step="1" min="0" max="24">
+            </div>
+            <div class="mb-3">
+                <label for="viernes">Viernes:</label>
+                <input name="viernes" type="number" id="viernes" class="form-control" required step="1" min="0" max="24">
+            </div>
+            <div class="mb-3">
+                <label for="sabado">Sábado:</label>
+                <input name="sabado" type="number" id="sabado" class="form-control" step="1" min="0" max="24">
+            </div>
+            <div class="mb-3">
+                <label for="domingo">Domingo:</label>
+                <input name="domingo" type="number" id="domingo" class="form-control" step="1" min="0" max="24">
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Aceptar</button>
+        </form>
+    </div>
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

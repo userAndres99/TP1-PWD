@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos Recibidos</title>
-</head>
-<body>
-    <h1>Información Recibida</h1>
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $nombre = $_POST['nombre'];
-        $apellido = $_POST['apellido'];
-        $edad = $_POST['edad'];
-        $direccion = $_POST['direccion'];
+<?php
 
-        echo "<p>Hola, yo soy $nombre $apellido, tengo $edad años y vivo en $direccion.</p>";
-    } else {
-        echo "<p>No se recibieron datos.</p>";
+class Datos {
+
+    public function mostrarDatos($array){
+
+        $mensaje = "Hola, yo soy " . 
+        $array['nombre'] .
+         " " . $array['apellido'] . 
+         ", tengo " . $array['edad'] . 
+         " años y vivo en " . 
+         $array['direccion'] . ".";
+
+        return $mensaje;
     }
-    ?>
-    <br>
-    <a href="../vista/ejercicio3.php">Volver al formulario</a>
-</body>
-</html>
+}
+
+?>
